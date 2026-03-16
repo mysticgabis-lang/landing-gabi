@@ -2,39 +2,111 @@
 <html>
 
 <head>
+
 <meta charset="UTF-8">
-<title>Landing da Gabi</title>
+<title>Aterrissando da Gabi</title>
 
 <style>
 
 body{
-font-family: Arial;
-background:#f4f4f4;
-display:flex;
-justify-content:center;
-align-items:center;
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#2c1a47,#5a2b83,#1b0c30);
 height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
 }
 
 .container{
-background:white;
-padding:40px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-width:350px;
+text-align:center;
+background:rgba(0,0,0,0.35);
+padding:50px;
+border-radius:20px;
+width:380px;
+backdrop-filter:blur(8px);
+box-shadow:0 20px 60px rgba(0,0,0,0.5);
 }
 
 h1{
-text-align:center;
+font-size:32px;
+margin-bottom:25px;
 }
 
 input, textarea{
+
 width:100%;
-padding:10px;
-margin-top:10px;
-border:1px solid #ccc;
-border-radius:5px;
+padding:14px;
+margin-top:12px;
+border-radius:8px;
+border:none;
+font-size:14px;
+
 }
+
+textarea{
+height:90px;
+resize:none;
+}
+
+button{
+
+width:100%;
+padding:14px;
+margin-top:20px;
+border:none;
+border-radius:8px;
+background:#a855f7;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+button:hover{
+background:#9333ea;
+transform:scale(1.03);
+}
+
+#msg{
+margin-top:15px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Aterrissando da Gabi</h1>
+
+<form id="form">
+
+<input id="campoA" type="text" placeholder="Seu nome" required>
+
+<input id="campoB" type="email" placeholder="Seu email" required>
+
+<input id="campoC" type="text" placeholder="Telefone" required>
+
+<textarea id="campoD" placeholder="O que você busca entender ou resolver?" required></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+<p id="msg"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>}
 
 button{
 width:100%;

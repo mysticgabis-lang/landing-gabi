@@ -6,7 +6,6 @@ document.getElementById("form").addEventListener("submit", function(e) {
     const telefone = document.getElementById("campoC").value;
     const mensagem = document.getElementById("campoD").value;
 
-    // Google Forms URL
     const url = "https://docs.google.com/forms/d/e/1FAIpQLSeZfnJ4gyvi5CPQEfFjYHHbekOZWlDZa6Gs1Hxk4YhbXwflyg/formResponse";
 
     const data = new FormData();
@@ -15,14 +14,10 @@ document.getElementById("form").addEventListener("submit", function(e) {
     data.append("entry.1816277901", telefone);
     data.append("entry.2072811760", mensagem);
 
-    fetch(url, {
-        method: "POST",
-        mode: "no-cors",
-        body: data
-    }).then(() => {
-        // Mensagem animada de sucesso
+    fetch(url, { method: "POST", mode: "no-cors", body: data })
+    .then(() => {
         const msg = document.getElementById("msg");
-        msg.innerText = "Mensagem enviada com sucesso!";
+        msg.innerText = "Mensagem enviada!";
         msg.style.opacity = 0;
         msg.style.transition = "opacity 0.5s";
         setTimeout(() => { msg.style.opacity = 1; }, 10);

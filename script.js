@@ -1,52 +1,29 @@
-body{
-font-family: Arial, Helvetica, sans-serif;
-background: linear-gradient(135deg,#6b4cff,#9c7bff);
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-margin:0;
-}
+document.getElementById("form").addEventListener("submit", function(e){
 
-.container{
-background:white;
-padding:40px;
-border-radius:14px;
-width:420px;
-box-shadow:0 20px 50px rgba(0,0,0,0.2);
-text-align:center;
-}
+e.preventDefault()
 
-h1{
-margin-bottom:25px;
-}
+const a = document.getElementById("campoA").value
+const b = document.getElementById("campoB").value
+const c = document.getElementById("campoC").value
+const d = document.getElementById("campoD").value
 
-input{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:8px;
-border:1px solid #ddd;
-font-size:15px;
-}
+const url = "https://docs.google.com/forms/d/e/1FAIpQLSeZfnJ4gyvi5CPQEfFjYHHbekOZWlDZa6Gs1Hxk4YhbXwflyg/formResponse"
 
-button{
-width:100%;
-padding:14px;
-margin-top:10px;
-background:#6b4cff;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-}
+const data = new FormData()
 
-button:hover{
-background:#5a3fe0;
-}
+data.append("entry.37116043", a)
+data.append("entry.1502729251", b)
+data.append("entry.1816277901", c)
+data.append("entry.2072811760", d)
 
-#msg{
-margin-top:15px;
-color:green;
-}
+fetch(url,{
+method:"POST",
+mode:"no-cors",
+body:data
+})
+
+document.getElementById("msg").innerText="Enviado com sucesso!"
+
+document.getElementById("form").reset()
+
+})

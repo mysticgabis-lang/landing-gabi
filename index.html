@@ -5,14 +5,14 @@
 <meta charset="UTF-8">
 <title>Mystic Gabis</title>
 
-<!-- Fonte igual ao rascunho -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Fonte mais feminina e estética simples -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #1e0b3a; /* fundo igual rascunho */
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(180deg, #000000 0%, #2a003d 100%);
     color: #fff;
     overflow-x: hidden;
 }
@@ -26,7 +26,7 @@ body {
 
 h1 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -36,26 +36,6 @@ p.description {
     font-size: 16px;
     color: #ddd;
     margin-bottom: 25px;
-}
-
-.button-main {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.button-discover {
-    background: #a855f7;
-    color: #fff;
-}
-.button-discover:hover {
-    background: #9333ea;
 }
 
 .features {
@@ -78,42 +58,57 @@ form textarea {
 
 form input::placeholder,
 form textarea::placeholder {
-    color: #888;
+    color: #aaa;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #a855f7;
+}
+
+form textarea {
+    height: 90px;
+    resize: none;
 }
 
 form button.enviar {
-    background: #a855f7;
-    color: #fff;
-    font-weight: 700;
-}
-
-form button.enviar:hover {
-    background: #9333ea;
+    display: none; /* mantém o envio via formulário, mas não mostra botão extra */
 }
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     margin-top: 20px;
 }
 
-button.whatsapp {
-    background: #25D366;
+button.whatsapp,
+button.instagram {
+    padding: 14px;
+    border: none;
+    border-radius: 24px; /* arredondado como o botão roxo */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
     color: #fff;
+}
+
+/* Leve degradê nos botões */
+button.whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #1ebc5a 100%);
 }
 
 button.whatsapp:hover {
-    background: #1ebe5d;
+    background: linear-gradient(135deg, #1ebc5a 0%, #17a74d 100%);
 }
 
 button.instagram {
-    background: #E1306C;
-    color: #fff;
+    background: linear-gradient(135deg, #e1306c 0%, #c92c61 100%);
 }
 
 button.instagram:hover {
-    background: #c1275b;
+    background: linear-gradient(135deg, #c92c61 0%, #a0224f 100%);
 }
 
 .footer {
@@ -122,43 +117,40 @@ button.instagram:hover {
     color: #aaa;
     margin: 40px 0 20px 0;
 }
-
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>Mystic Gabis</h1>
-    <p class="description">Descubra as mensagens que o universo tem para você e conecte-se com sua energia espiritual.</p>
 
-    <button class="button-main button-discover">Descobrir minha energia</button>
+<h1>Mystic Gabis</h1>
+<p class="description">Descubra as mensagens que o universo tem para você e conecte-se com sua energia espiritual.</p>
 
-    <div class="features">
-        <p><strong>O que você vai receber:</strong></p>
-        <p>🔮 Orientação espiritual personalizada</p>
-        <p>🌙 Insights sobre seu momento atual</p>
-        <p>✨ Conexão com sua energia interior</p>
-        <p>💫 Caminhos para evolução pessoal</p>
-    </div>
+<div class="features">
+    <p><strong>O que você vai receber:</strong></p>
+    <p>🔮 Orientação espiritual personalizada</p>
+    <p>🌙 Insights sobre seu momento atual</p>
+    <p>✨ Conexão com sua energia interior</p>
+    <p>💫 Caminhos para evolução pessoal</p>
+</div>
 
-    <p class="description">Preencha o formulário</p>
-    <form id="form">
-        <input id="campoA" placeholder="Seu nome" required>
-        <input id="campoB" placeholder="Seu e-mail" required>
-        <input id="campoC" placeholder="Telefone">
-        <textarea id="campoD" placeholder="Sua mensagem"></textarea>
-        <button class="enviar" type="submit">Enviar</button>
-    </form>
+<p class="description">Preencha o formulário</p>
+<form id="form">
+    <input id="campoA" placeholder="Seu nome" required>
+    <input id="campoB" placeholder="Seu e-mail" required>
+    <input id="campoC" placeholder="Telefone">
+    <textarea id="campoD" placeholder="Sua mensagem"></textarea>
+    <button class="enviar" type="submit"></button>
+</form>
 
-    <div class="links">
-        <button class="instagram" onclick="window.open('https://www.instagram.com/almaelua.store/')">Visitar Loja Alma e Lua</button>
-        <button class="whatsapp" onclick="window.open('https://wa.me/5519981351382')">Falar no WhatsApp</button>
-    </div>
+<div class="links">
+    <button class="instagram" onclick="window.open('https://www.instagram.com/almaelua.store/')">Visitar Loja Alma e Lua</button>
+    <button class="whatsapp" onclick="window.open('https://wa.me/5519981351382')">Falar no WhatsApp</button>
+</div>
 
-    <div class="footer">
-        © Mystic Gabis • Conexão espiritual
-    </div>
+<div class="footer">
+    © Mystic Gabis • Conexão espiritual
 </div>
 
 <script src="script.js"></script>

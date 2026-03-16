@@ -4,24 +4,87 @@
 <head>
 <meta charset="UTF-8">
 <title>Landing da Gabi</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+width:350px;
+}
+
+h1{
+text-align:center;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin-top:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:15px;
+background:#6c5ce7;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#5a4bd6;
+}
+
+#msg{
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+}
+
+</style>
+
 </head>
 
 <body>
+
+<div class="container">
 
 <h1>Landing da Gabi</h1>
 
 <form id="form">
 
-<input id="campoA" type="text" placeholder="testeA" required>
-<input id="campoB" type="text" placeholder="testeB" required>
-<input id="campoC" type="text" placeholder="testeC" required>
-<input id="campoD" type="text" placeholder="testeD" required>
+<input id="campoA" type="text" placeholder="Seu nome" required>
+
+<input id="campoB" type="email" placeholder="Seu email" required>
+
+<input id="campoC" type="text" placeholder="Telefone" required>
+
+<textarea id="campoD" placeholder="O que você busca entender ou resolver?" required></textarea>
 
 <button type="submit">Enviar</button>
 
 </form>
 
 <p id="msg"></p>
+
+</div>
 
 <script src="script.js"></script>
 

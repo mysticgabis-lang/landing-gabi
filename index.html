@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>Mystic Gabis</title>
 
-<!-- Fonte mais feminina e estética simples -->
+<!-- Fonte feminina e estética simples -->
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
@@ -35,6 +35,142 @@ p.description {
     text-align: center;
     font-size: 16px;
     color: #ddd;
+    margin-bottom: 25px;
+}
+
+.features {
+    margin: 20px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #aaa;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid #a855f7;
+}
+
+form textarea {
+    height: 90px;
+    resize: none;
+}
+
+/* Botão de enviar */
+button.enviar {
+    background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+    color: #fff;
+    border-radius: 24px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button.enviar:hover {
+    background: linear-gradient(135deg, #9333ea 0%, #7a23d8 100%);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+button.whatsapp,
+button.instagram {
+    padding: 14px;
+    border: none;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #fff;
+}
+
+/* Leve degradê nos botões */
+button.whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #1ebc5a 100%);
+}
+
+button.whatsapp:hover {
+    background: linear-gradient(135deg, #1ebc5a 0%, #17a74d 100%);
+}
+
+button.instagram {
+    background: linear-gradient(135deg, #e1306c 0%, #c92c61 100%);
+}
+
+button.instagram:hover {
+    background: linear-gradient(135deg, #c92c61 0%, #a0224f 100%);
+}
+
+.footer {
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin: 40px 0 20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Mystic Gabis</h1>
+<p class="description">Descubra as mensagens que o universo tem para você e conecte-se com sua energia espiritual.</p>
+
+<div class="features">
+    <p><strong>O que você vai receber:</strong></p>
+    <p>🔮 Orientação espiritual personalizada</p>
+    <p>🌙 Insights sobre seu momento atual</p>
+    <p>✨ Conexão com sua energia interior</p>
+    <p>💫 Caminhos para evolução pessoal</p>
+</div>
+
+<p class="description">Preencha o formulário</p>
+<form id="form">
+    <input id="campoA" placeholder="Seu nome" required>
+    <input id="campoB" placeholder="Seu e-mail" required>
+    <input id="campoC" placeholder="Telefone">
+    <textarea id="campoD" placeholder="Sua mensagem"></textarea>
+    
+    <!-- Botão de enviar -->
+    <button class="enviar" type="submit">Enviar</button>
+</form>
+
+<div class="links">
+    <button class="instagram" onclick="window.open('https://www.instagram.com/almaelua.store/')">Visitar Loja Alma e Lua</button>
+    <button class="whatsapp" onclick="window.open('https://wa.me/5519981351382')">Falar no WhatsApp</button>
+</div>
+
+<div class="footer">
+    © Mystic Gabis • Conexão espiritual
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>    color: #ddd;
     margin-bottom: 25px;
 }
 

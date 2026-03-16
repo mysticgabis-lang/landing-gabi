@@ -15,13 +15,8 @@ document.getElementById("form").addEventListener("submit", function(e) {
     data.append("entry.2072811760", mensagem);
 
     fetch(url, { method: "POST", mode: "no-cors", body: data })
-    .then(() => {
-        const msg = document.getElementById("msg");
-        msg.innerText = "Mensagem enviada!";
-        msg.style.opacity = 0;
-        msg.style.transition = "opacity 0.5s";
-        setTimeout(() => { msg.style.opacity = 1; }, 10);
-
-        document.getElementById("form").reset();
-    });
+        .then(() => {
+            alert("Mensagem enviada com sucesso!");
+            document.getElementById("form").reset();
+        });
 });

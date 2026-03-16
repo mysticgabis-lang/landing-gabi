@@ -71,8 +71,22 @@ form textarea {
     resize: none;
 }
 
-form button.enviar {
-    display: none; /* mantém o envio via formulário, mas não mostra botão extra */
+/* Botão enviar roxo e arredondado */
+button.enviar {
+    background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+    color: #fff;
+    border-radius: 24px; /* arredondado */
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+    width: 100%;
+}
+
+button.enviar:hover {
+    background: linear-gradient(135deg, #9333ea 0%, #7a23d8 100%);
 }
 
 .links {
@@ -86,7 +100,7 @@ button.whatsapp,
 button.instagram {
     padding: 14px;
     border: none;
-    border-radius: 24px; /* arredondado como o botão roxo */
+    border-radius: 24px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -141,7 +155,9 @@ button.instagram:hover {
     <input id="campoB" placeholder="Seu e-mail" required>
     <input id="campoC" placeholder="Telefone">
     <textarea id="campoD" placeholder="Sua mensagem"></textarea>
-    <button class="enviar" type="submit"></button>
+    
+    <!-- Botão de enviar adicionado corretamente -->
+    <button class="enviar" type="submit">Enviar</button>
 </form>
 
 <div class="links">
